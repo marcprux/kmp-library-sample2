@@ -14,12 +14,12 @@ kotlin {
     val macosArm64 = macosArm64()
     val macosX64 = macosX64()
 
-    val xcFramework = XCFramework("MultiPlatformLibrary")
+    val xcFramework = XCFramework("MultiPlatformLibrary2")
     configure(listOf(iosArm64, iosX64, iosSimulatorArm64, macosArm64, macosX64)) {
         binaries {
             framework {
                 isStatic = true
-                baseName = "MultiPlatformLibrary"
+                baseName = "MultiPlatformLibrary2"
                 xcFramework.add(this)
             }
         }
