@@ -1,4 +1,4 @@
-package multi.platform.library
+package multi.platform.library2
 
 import kotlin.random.Random
 import kotlin.random.nextInt
