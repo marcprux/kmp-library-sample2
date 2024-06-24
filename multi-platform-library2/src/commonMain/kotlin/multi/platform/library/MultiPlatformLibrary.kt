@@ -11,19 +11,19 @@ import kotlinx.coroutines.delay
 //import kotlin.coroutines.cancellation.CancellationException
 //import io.ktor.client.engine.cio.CIO
 
-object Singleton {
+object Singleton2 {
     fun stringFunction(): String {
         return "Hello"
     }
 }
 
-class SampleClass(var stringField: String, var intField: Int, val doubleField: Double) {
+class SampleClass2(var stringField: String, var intField: Int, val doubleField: Double) {
     fun addNumbers() : Double {
         return intField + doubleField
     }
 }
 
-class SampleAsync {
+class SampleAsync2 {
     suspend fun performSuspend(duration: Long, value: String): String {
         delay(duration)  // Suspends the coroutine
         return value
@@ -44,7 +44,7 @@ class SampleAsync {
 //    }
 //}
 
-enum class SampleEnum(val rawValue: Int) {
+enum class SampleEnum2(val rawValue: Int) {
     a(1),
     b(2),
     c(3)
@@ -52,15 +52,15 @@ enum class SampleEnum(val rawValue: Int) {
 
 // sample borrowed from: https://github.com/android/kotlin-multiplatform-samples/blob/main/DiceRoller/shared/src/commonMain/kotlin/com/google/samples/apps/diceroller/DiceSettings.kt
 
-data class DiceSettings(
+data class DiceSettings2(
     val diceCount: Int,
     val sideCount: Int,
     val uniqueRollsOnly: Boolean,
 )
 
-class DiceRoller {
+class DiceRoller2 {
     @Throws(IllegalArgumentException::class)
-    fun rollDice(settings: DiceSettings): List<Int> {
+    fun rollDice(settings: DiceSettings2): List<Int> {
         require(settings.diceCount >= 1) {
             "Must throw a positive number of dice (tried to roll ${settings.diceCount})"
         }
