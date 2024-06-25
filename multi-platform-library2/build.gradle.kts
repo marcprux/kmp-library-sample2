@@ -14,12 +14,12 @@ kotlin {
     val macosArm64 = macosArm64()
     val macosX64 = macosX64()
 
-    val xcFramework = XCFramework("MultiPlatformLibrary2")
+    val xcFramework = XCFramework("ExtraMultiPlatformLibrary2")
     configure(listOf(iosArm64, iosX64, iosSimulatorArm64, macosArm64, macosX64)) {
         binaries {
             framework {
                 isStatic = true
-                baseName = "MultiPlatformLibrary2"
+                baseName = "ExtraMultiPlatformLibrary2"
                 xcFramework.add(this)
             }
         }
@@ -58,7 +58,7 @@ kotlin {
 android {
     namespace = "com.example.library"
     compileSdk = libs.versions.compileSdk.get().toInt()
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xmlX")
+    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
         minSdk = libs.versions.minSdk.get().toInt()
     }

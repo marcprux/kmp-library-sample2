@@ -10,7 +10,7 @@ if [ -z "${LATEST_VERSION}" ]; then LATEST_VERSION="0.0.0"; fi
 
 NEW_VERSION=$(semver bump ${SEMVER_BUMP:-patch} ${LATEST_VERSION})
 
-ARTIFACT="multi-platform-library2/build/XCFrameworks/release/MultiPlatformLibrary2.xcframework.zip"
+ARTIFACT="multi-platform-library2/build/XCFrameworks/release/ExtraMultiPlatformLibrary2.xcframework.zip"
 
 gh release create --notes "$(cat ${ARTIFACT} | shasum -a 256)" ${NEW_VERSION} ${ARTIFACT}
 
